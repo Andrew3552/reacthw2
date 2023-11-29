@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import ModalWrapper from './ModalWrapper'
 import Modal from './Modal'
 import ModalHeader from './ModalHeader'
@@ -22,6 +24,13 @@ const ModalBase = ({title, desc, handleClose, handleOk}) => {
             </Modal>
         </ModalWrapper>
     )
+}
+
+ModalBase.propTypes = {
+    title: PropTypes.string,
+    desc: PropTypes.string,
+    handleClose: PropTypes.func,
+    handleOk: PropTypes.func
 }
 
 export default ModalBase

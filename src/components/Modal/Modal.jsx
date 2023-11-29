@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import cx from 'classnames'
 const Modal = ({children, classNames}) => {
 
@@ -9,6 +11,11 @@ const Modal = ({children, classNames}) => {
             </div>
         </div>
     )
+}
+
+Modal.propTypes = {
+    children: PropTypes.node,
+    classNames: PropTypes.string
 }
 
 export default Modal

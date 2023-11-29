@@ -32,6 +32,12 @@ const ProductCarts = ({
         setIsModalOpen(!isModalOpen);
     }
 
+    const handleAddToCartWithModalClose = (article) => {
+        handleAddToCart(article);
+        openModal(); 
+    }
+
+
     const [isClicked, setIsClicked] = useState(() => {
         const savedIsClicked = localStorage.getItem(`isClicked_${article}`);
         return savedIsClicked ? JSON.parse(savedIsClicked) : false;
@@ -53,6 +59,7 @@ const ProductCarts = ({
         {isModalOpen && 
             (<ProductModal
             products={products}
+            handleAddToCartWithModalClose={handleAddToCartWithModalClose}
             handleClose={openModal}
             isFavorite={isFavorite}
             handleFavorite={handleFavorite}
@@ -91,7 +98,16 @@ const ProductCarts = ({
 }
 
 ProductCarts.propTypes = {
-    products: PropTypes.object,
+    name: PropTypes.string,
+    price: PropTypes.number,
+    image: PropTypes.string,
+    article: PropTypes.number,
+    color: PropTypes.string,
+    handleAddToCartWithModalClose: PropTypes.func,
+    handleFavorite: PropTypes.func,
+    handleAddToCart: PropTypes.func,
+    isFavorite: PropTypes.func,
+    isCart: PropTypes.func 
 }
 
 export default ProductCarts

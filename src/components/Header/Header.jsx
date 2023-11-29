@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Container from "../Helper/Container"
 import Body from "../Helper/Body"
 import NavMenu from "./components/NavMenu"
@@ -20,6 +22,11 @@ const Header = ({favorite, addToCart}) => {
             </Container>
         </div>
     )
+}
+
+Header.propTypes = {
+    favorite: PropTypes.array,
+    addToCart: PropTypes.array
 }
 
 export default Header

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import HeartIcon from "./icons/heart"
 import ShoppingCartIcon from "./icons/shopping-cart"
 
@@ -15,6 +17,11 @@ const HeaderBtn = ({favorite, addToCart}) => {
             </div> 
         </div>
     )
+}
+
+HeaderBtn.propTypes = {
+    favorite: PropTypes.array,
+    addToCart: PropTypes.array
 }
 
 export default HeaderBtn

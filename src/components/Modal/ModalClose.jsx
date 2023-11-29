@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const ModalClose = ({ModalClose}) => {
     return (
         <button onClick={ModalClose} type="button" className="modal__close">
@@ -6,6 +8,10 @@ const ModalClose = ({ModalClose}) => {
             </svg>
         </button>
     )
+}
+
+ModalClose.propTypes = {
+    ModalClose: PropTypes.func
 }
 
 export default ModalClose

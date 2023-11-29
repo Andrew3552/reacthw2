@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Container from "../../Helper/Container"
 import Body from "../../Helper/Body"
 import Products from "./component/Products"
@@ -27,6 +29,14 @@ const MainProduct = ({
             </Container>
         </div>
     )
+}
+
+MainProduct.propTypes = {
+    handleFavorite: PropTypes.func,
+    productArray: PropTypes.array,
+    isFavorite: PropTypes.func,
+    isCart: PropTypes.func,
+    handleAddToCart: PropTypes.func
 }
 
 export default MainProduct

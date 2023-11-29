@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import NavItem from "./NavItem"
 
 const NavMenu = () => {
@@ -18,6 +20,10 @@ const NavMenu = () => {
                    {navItem}
                </ul> 
             )
+}
+
+NavMenu.propTypes = {
+    className: PropTypes.string
 }
 
 export default NavMenu

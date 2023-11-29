@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import Modal from "../../../Modal/Modal";
 import ModalBody from "../../../Modal/ModalBody";
 import ModalClose from "../../../Modal/ModalClose";
@@ -17,7 +19,8 @@ const ProductModal = ({
   handleFavorite, 
   isFavorite, 
   isCart, 
-  handleAddToCart
+  handleAddToCart,
+  handleAddToCartWithModalClose
 }) => {
 
     return (
@@ -42,6 +45,7 @@ const ProductModal = ({
         secondText="Favorite"
         isFavorite={isFavorite}
         handleFavorite={handleFavorite}
+        handleAddToCartWithModalClose={handleAddToCartWithModalClose}
         isCart={isCart}
         handleAddToCart={handleAddToCart}
         ModalClose={handleClose}
@@ -53,5 +57,19 @@ const ProductModal = ({
     </ModalWrapper>
   );
 };
+
+ProductModal.propTypes = {
+  handleClose: PropTypes.func,
+  name: PropTypes.string,
+  image: PropTypes.string,
+  price: PropTypes.number,
+  article: PropTypes.number,
+  color: PropTypes.string,
+  handleFavorite: PropTypes.func,
+  isFavorite: PropTypes.func,
+  isCart: PropTypes.func,
+  handleAddToCart: PropTypes.func,
+  handleAddToCartWithModalClose: PropTypes.func
+}
 
 export default ProductModal;

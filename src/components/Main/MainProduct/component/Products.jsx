@@ -31,7 +31,11 @@ const Products = ({
 }
 
 Products.propTypes = {
-    data: PropTypes.array
+    data: PropTypes.array,
+    handleFavorite: PropTypes.func,
+    isFavorite: PropTypes.func,
+    isCart: PropTypes.func,
+    handleAddToCart: PropTypes.func
 }
 
 

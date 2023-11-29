@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { sendRequest } from './components/Helper/sendRequest'
 
+import PropTypes from "prop-types";
+
 import Header from './components/Header/Header'
 import MainTitle from './components/Main/MainTitle/MainTitle'
 import MainProduct from './components/Main/MainProduct/MainProduct'
@@ -83,6 +85,19 @@ function App() {
       <Footer />
     </>
   )
+}
+
+App.propTypes = {
+  productArray: PropTypes.array,
+  handleFavorite: PropTypes.func,
+  handleAddToCart: PropTypes.func,
+  isCart: PropTypes.func,
+  isFavorite: PropTypes.func,
+  favorite: PropTypes.array,
+  addToCart: PropTypes.array,
+  setProductArray: PropTypes.func,
+  setFavorite: PropTypes.func,
+  setAddToCart: PropTypes.func,
 }
 
 export default App
